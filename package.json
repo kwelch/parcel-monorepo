@@ -1,0 +1,34 @@
+{
+	"name": "parcel-monorepo",
+	"private": true,
+	"version": "1.0.0",
+	"description": "Experimental playground for playing with parcel within a monorepo",
+	"main": "index.js",
+	"scripts": {
+		"postinstall": "bolt-check",
+		"cli": "./tools/cli/cli.js",
+		"test": "ava"
+	},
+	"keywords": [
+		"parcel",
+		"monorepo",
+		"playground",
+		"experiment"
+	],
+	"author": "Kyle Welch <kwelch0626@gmail.com> (https://kwelch.dev/)",
+	"license": "MIT",
+	"dependencies": {
+		"ava": "^3.8.2",
+		"bolt-check": "^0.4.5",
+		"parcel": "^2.0.0-nightly.256",
+		"scritch": "^1.3.1"
+	},
+	"prettier": {
+		"useTabs": true,
+		"trailingComma": "es5"
+	},
+	"workspaces": [
+		"packages/*",
+		"tools/*"
+	]
+}
